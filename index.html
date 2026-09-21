@@ -128,8 +128,12 @@ a{color:var(--vin)}
 .scroll.nudge svg{animation:nudge .7s ease-out}
 @keyframes nudge{0%{transform:rotate(0)}15%{transform:rotate(-4deg) translateY(-3px)}35%{transform:rotate(3deg)}55%{transform:rotate(-2deg)}75%{transform:rotate(1deg)}100%{transform:rotate(0)}}
 .scroll-note{margin:1.2rem 0 0;font-size:1.05rem;line-height:1.5}
-.scroll-reply{min-height:1.8rem;margin:.4rem 0 0;font-family:var(--hand);color:var(--vin);font-size:1rem;opacity:0;transition:opacity .3s}
-.scroll-reply.show{opacity:1}
+.scroll-reply{min-height:3.2em;margin:1rem auto 0;max-width:20rem;font-family:var(--display);font-style:italic;font-size:1.3rem;line-height:1.3;color:var(--vin);opacity:0;transform:translateY(6px);transition:opacity .5s,transform .5s}
+.scroll-reply.show{opacity:1;transform:none}
+@media (prefers-reduced-motion:no-preference){
+  .scroll:not(.touched) svg{animation:bob 4.5s ease-in-out 2.5s infinite}
+  @keyframes bob{0%,82%,100%{transform:none}86%{transform:rotate(-2deg) translateY(-3px)}90%{transform:rotate(1.5deg)}94%{transform:rotate(-.8deg)}}
+}
 .visually-hidden{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 .stain{position:absolute;width:9.5rem;right:-2.2rem;bottom:-2.6rem;pointer-events:none;mix-blend-mode:multiply;transform:rotate(-20deg)}
 
@@ -137,15 +141,10 @@ a{color:var(--vin)}
 .quote{padding:3rem 0 4rem;text-align:center}
 .quote blockquote{margin:0}
 .quote .fr{font-family:var(--display);font-style:italic;font-weight:500;font-size:clamp(2.1rem,9vw,3.2rem);line-height:1.08;text-wrap:balance;margin:0;color:var(--vin)}
+.quote .author{color:inherit;text-decoration:underline;text-decoration-color:rgba(94,26,36,.45);text-underline-offset:3px}
+.quote .wink{display:block;font-family:var(--text);font-size:.98rem;color:var(--encre-soft);margin-top:.3rem;font-style:italic}
 .quote .cz{margin:.6rem 0 0;font-size:1.05rem;color:var(--encre-soft)}
 .quote figcaption{margin-top:1.4rem;font-family:var(--display);font-size:1.3rem}
-.quote .years{color:var(--encre-soft);font-size:.9em}
-.quote .bio{
-  position:relative;text-align:left;max-width:28rem;margin:1.6rem auto 0;padding:1.4rem 1.4rem 1.3rem;
-  font-family:var(--text);font-size:1.02rem;line-height:1.55;hyphens:auto;
-  background:#F3EFE3 linear-gradient(transparent 1.55em, rgba(94,26,36,.1) 1.55em) 0 1.4rem/100% 1.55em;
-  border:1px solid rgba(31,42,36,.16);border-top:3px solid rgba(94,26,36,.55);
-  transform:rotate(.7deg);box-shadow:0 14px 24px -20px rgba(60,40,20,.5)}
 
 /* ---------- KUCHAŘI ---------- */
 .chefs{padding:1rem 0 4rem}
@@ -175,7 +174,7 @@ footer{padding:2rem 0 3rem;text-align:center}
 .bell span{font-family:var(--display);font-style:italic;font-size:1.1rem;color:var(--encre-soft)}
 .bell.ring svg{animation:ring .6s ease-out}
 @keyframes ring{0%{transform:rotate(0)}20%{transform:rotate(-9deg)}40%{transform:rotate(7deg)}60%{transform:rotate(-4deg)}80%{transform:rotate(2deg)}100%{transform:rotate(0)}}
-.service{display:block;height:1.8rem;font-family:var(--hand);color:var(--vin);font-size:1.1rem;opacity:0;transition:opacity .3s}
+.service{display:block;height:1.8rem;font-family:var(--display);font-style:italic;font-weight:600;color:var(--vin);font-size:1.35rem;opacity:0;transition:opacity .3s}
 .service.show{opacity:1}
 .colophon{margin:1.6rem 0 0;font-size:.95rem;color:var(--encre-soft)}
 
@@ -193,8 +192,12 @@ footer{padding:2rem 0 3rem;text-align:center}
 .scroll.nudge svg{animation:nudge .7s ease-out}
 @keyframes nudge{0%{transform:rotate(0)}15%{transform:rotate(-4deg) translateY(-3px)}35%{transform:rotate(3deg)}55%{transform:rotate(-2deg)}75%{transform:rotate(1deg)}100%{transform:rotate(0)}}
 .scroll-note{margin:1.2rem 0 0;font-size:1.05rem;line-height:1.5}
-.scroll-reply{min-height:1.8rem;margin:.4rem 0 0;font-family:var(--hand);color:var(--vin);font-size:1rem;opacity:0;transition:opacity .3s}
-.scroll-reply.show{opacity:1}
+.scroll-reply{min-height:3.2em;margin:1rem auto 0;max-width:20rem;font-family:var(--display);font-style:italic;font-size:1.3rem;line-height:1.3;color:var(--vin);opacity:0;transform:translateY(6px);transition:opacity .5s,transform .5s}
+.scroll-reply.show{opacity:1;transform:none}
+@media (prefers-reduced-motion:no-preference){
+  .scroll:not(.touched) svg{animation:bob 4.5s ease-in-out 2.5s infinite}
+  @keyframes bob{0%,82%,100%{transform:none}86%{transform:rotate(-2deg) translateY(-3px)}90%{transform:rotate(1.5deg)}94%{transform:rotate(-.8deg)}}
+}
 .visually-hidden{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 .stain{right:-4rem}
 }
@@ -236,7 +239,7 @@ footer{padding:2rem 0 3rem;text-align:center}
 
 <main>
   <section class="intro wrap">
-    <p>Ahoj kamarádi, nebo bychom snad měli říct: <span lang="fr">Bonjour</span>? Po nevhodně dlouhém roce čekání budeme moc rádi, když se opět potkáme na společném obědě. Bude se podávat <em>Hosti.na!</em></p>
+    <p>Ahoj kamarádi, nebo bychom snad měli říct: <span lang="fr">Bonjour</span>? Po nevhodně dlouhém roce čekání budeme moc rádi, když se opět potkáme na společném obědě. Bude se podávat Hosti.na!</p>
     <p>Po Mexiku, Česku a Vegetariánsku se tentokrát vydáme na <em>francouzský venkov</em>. Jeho tradiční pokrmy totiž zahřejí a sezónní suroviny umožní přivítat podzim a rozloučit se s létem. Patronem naší kuchyně je proto tentokrát legendární francouzský šéfkuchař Auguste Escoffier.</p>
   </section>
 
@@ -245,7 +248,7 @@ footer{padding:2rem 0 3rem;text-align:center}
       <h2 id="menu-title">Menu</h2>
       <p class="sub">du déjeuner, lundi 28 septembre</p>
 
-      <button class="scroll" id="scroll" type="button" aria-describedby="scroll-note">
+      <button class="scroll" id="scroll" type="button" aria-controls="scroll-reply">
         <svg viewBox="0 0 320 150" aria-hidden="true">
           <defs>
             <linearGradient id="roll" x1="0" y1="0" x2="0" y2="1">
@@ -274,13 +277,12 @@ footer{padding:2rem 0 3rem;text-align:center}
           </g>
           <text x="161.5" y="85" text-anchor="middle" font-family="Cormorant Garamond, Georgia, serif" font-style="italic" font-weight="600" font-size="23" fill="#8C3A45">H</text>
         </svg>
-        <span class="visually-hidden">Zarolované menu</span>
+        <span class="visually-hidden">Rozbalit menu</span>
       </button>
 
-      <p class="scroll-note" id="scroll-note">Menu odtajníme během tohoto týdne.</p>
       <p class="scroll-reply" id="scroll-reply" aria-live="polite"></p>
 
-      <p class="maman">Menu přizpůsobíme těhotným a kojícím maminkám.</p>
+      <p class="maman">Jídla samozřejmě přizpůsobíme těhotným ženám a kojícím maminkám.</p>
 
       <svg class="stain" viewBox="0 0 200 200" aria-hidden="true">
         <defs>
@@ -302,12 +304,10 @@ footer{padding:2rem 0 3rem;text-align:center}
 
   <figure class="quote wrap">
     <blockquote>
-      <p class="fr" lang="fr">La bonne cuisine est la base du véritable bonheur.</p>
-      <p class="cz">Dobrá kuchyně je základem opravdového štěstí.</p>
+      <p class="fr" lang="en">Winner is the game.</p>
     </blockquote>
-    <figcaption>
-      <span class="who">Auguste Escoffier <span class="years">(1846–1935)</span></span>
-      <p class="bio">Syn kováře z Provence, který se stal „králem kuchařů a kuchařem králů“. Vedl kuchyně hotelů Savoy a Carlton v Londýně a Ritz v Paříži. Kuchyni rozdělil na jasně řízenou brigádu, kde má každý svou stanici. Tenhle systém dodnes používají restaurace po celém světě. Jeho <em lang="fr">Le Guide Culinaire</em> z roku 1903 shrnul francouzskou kuchyni do zhruba pěti tisíc receptů a pěti základních omáček.</p>
+    <figcaption><a class="author" href="https://www.apetitonline.cz/lide-jidlo/kral-sefkucharu-sefkuchar-kralu-rekordman-auguste-escoffier" target="_blank" rel="noopener">Auguste Escoffier</a> / Petr Novák
+      <span class="wink">Muž, jehož kuchařka má přes pět tisíc receptů.</span>
     </figcaption>
   </figure>
 
@@ -325,7 +325,7 @@ footer{padding:2rem 0 3rem;text-align:center}
     <dl>
       <dt>Kdy</dt><dd>Pondělí 28. září 2026, ve 12:00</dd>
       <dt>Kde</dt><dd><a href="https://mapy.cz/?q=Krkono%C5%A1sk%C3%A1%2012%2C%20Praha%202" target="_blank" rel="noopener">Krkonošská 12, Praha 2</a></dd>
-      <dt>U stolu</dt><dd>Jedenáct hostů, dva kuchaři</dd>
+      <dt>U stolu</dt><dd>Dvanáct <a href="https://www.mujrozhlas.cz/akcent/hoststvo-budi-vasne-uz-nejde-o-spor-o-jazyk-ale-o-tema-rika-filozof" target="_blank" rel="noopener">hoststva</a> a jedna hostka na cestě</dd>
     </dl>
     <p class="countdown" id="countdown" aria-live="polite"></p>
   </section>
@@ -348,15 +348,14 @@ footer{padding:2rem 0 3rem;text-align:center}
 <div class="torchon" aria-hidden="true"></div>
 
 <script>
-// Zarolované menu: zatím se nedá otevřít
+// Zarolované menu: po klepnutí se jen objeví vzkaz
 (function(){
   const sc=document.getElementById('scroll'), out=document.getElementById('scroll-reply');
-  const replies=['Pas encore !','Patience…','Encore quelques jours !','Non, non, non.'];
-  let i=0,t;
   sc.addEventListener('click',()=>{
+    sc.classList.add('touched');
     sc.classList.remove('nudge'); void sc.offsetWidth; sc.classList.add('nudge');
-    out.textContent=replies[i++%replies.length]; out.classList.add('show');
-    clearTimeout(t); t=setTimeout(()=>out.classList.remove('show'),2000);
+    out.textContent='Děkujeme za váš zájem, menu odtajníme během tohoto týdne.';
+    out.classList.add('show');
   });
 })();
 
@@ -385,7 +384,7 @@ footer{padding:2rem 0 3rem;text-align:center}
 // Zvonek na obsluhu
 (function(){
   const bell=document.getElementById('bell'), msg=document.getElementById('service');
-  const replies=['Oui, j’arrive !','Tout de suite, monsieur !','Un instant, madame !','Voilà !','Encore du vin ?'];
+  const replies=['Tady nejsi na nádraží!','Spolu jsme husy nepásli!','Ještě slovo a máš ji!','Igore, neser!','My děkujeme!','Ara more, jedou benga!'];
   let ctx, i=0, t;
   function ding(){
     try{
