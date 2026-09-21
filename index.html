@@ -139,7 +139,13 @@ a{color:var(--vin)}
 .quote .fr{font-family:var(--display);font-style:italic;font-weight:500;font-size:clamp(2.1rem,9vw,3.2rem);line-height:1.08;text-wrap:balance;margin:0;color:var(--vin)}
 .quote .cz{margin:.6rem 0 0;font-size:1.05rem;color:var(--encre-soft)}
 .quote figcaption{margin-top:1.4rem;font-family:var(--display);font-size:1.3rem}
-.quote .wink{display:block;font-family:var(--text);font-size:.98rem;color:var(--encre-soft);margin-top:.3rem;font-style:italic}
+.quote .years{color:var(--encre-soft);font-size:.9em}
+.quote .bio{
+  position:relative;text-align:left;max-width:28rem;margin:1.6rem auto 0;padding:1.4rem 1.4rem 1.3rem;
+  font-family:var(--text);font-size:1.02rem;line-height:1.55;hyphens:auto;
+  background:#F3EFE3 linear-gradient(transparent 1.55em, rgba(94,26,36,.1) 1.55em) 0 1.4rem/100% 1.55em;
+  border:1px solid rgba(31,42,36,.16);border-top:3px solid rgba(94,26,36,.55);
+  transform:rotate(.7deg);box-shadow:0 14px 24px -20px rgba(60,40,20,.5)}
 
 /* ---------- KUCHAŘI ---------- */
 .chefs{padding:1rem 0 4rem}
@@ -231,7 +237,7 @@ footer{padding:2rem 0 3rem;text-align:center}
 <main>
   <section class="intro wrap">
     <p>Ahoj kamarádi, nebo bychom snad měli říct: <span lang="fr">Bonjour</span>? Po nevhodně dlouhém roce čekání budeme moc rádi, když se opět potkáme na společném obědě. Bude se podávat Hosti.na!</p>
-    <p>Po Mexiku, Česku a Vegetariánsku se tentokrát vydáme na <em>francouzský venkov</em>. Jeho tradiční pokrmy nás totiž zahřejí a sezónními surovinami přivítáme podzim a rozloučíme se s létem. Patronem naší kuchyně je proto tentokrát legendární francouzský šéfkuchař Auguste Escoffier.</p>
+    <p>Po Mexiku, Česku a Vegetariánsku se tentokrát vydáme na <em>francouzský venkov</em>. Jeho tradiční pokrmy totiž zahřejí a sezónní suroviny umožní přivítat podzim a rozloučit se s létem. Patronem naší kuchyně je proto tentokrát legendární francouzský šéfkuchař Auguste Escoffier.</p>
   </section>
 
   <section class="menu-section wrap" id="menu" aria-labelledby="menu-title">
@@ -299,8 +305,9 @@ footer{padding:2rem 0 3rem;text-align:center}
       <p class="fr" lang="fr">La bonne cuisine est la base du véritable bonheur.</p>
       <p class="cz">Dobrá kuchyně je základem opravdového štěstí.</p>
     </blockquote>
-    <figcaption>Auguste Escoffier
-      <span class="wink">Muž, jehož kuchařka má přes pět tisíc receptů.</span>
+    <figcaption>
+      <span class="who">Auguste Escoffier <span class="years">(1846–1935)</span></span>
+      <p class="bio">Syn kováře z Provence, který se stal „králem kuchařů a kuchařem králů“. Vedl kuchyně hotelů Savoy a Carlton v Londýně a Ritz v Paříži. Kuchyni rozdělil na jasně řízenou brigádu, kde má každý svou stanici. Tenhle systém dodnes používají restaurace po celém světě. Jeho <em lang="fr">Le Guide Culinaire</em> z roku 1903 shrnul francouzskou kuchyni do zhruba pěti tisíc receptů a pěti základních omáček.</p>
     </figcaption>
   </figure>
 
